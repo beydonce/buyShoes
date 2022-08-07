@@ -1,0 +1,144 @@
+body {
+    background-image: url('../assets/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+#cactusPic {
+    border-radius: 50%;
+    position: relative;
+    left: 1500px;
+    top: 550px;
+    width: 170px;
+}
+
+@import url('http://fonts.cdnfonts.com/css/brittany-signature');
+
+#cactus-text {
+    font-family: 'Brittany Signature', sans-serif;
+    letter-spacing: 2px;
+    color: #2B7A0B;
+    position: relative;
+    top: 580px;
+    text-align: center;
+    margin-left: 1260px;
+    font-size: 55px;
+}
+
+#resalerPic {
+    border-radius: 50%;
+    position: relative;
+    bottom: 190px;
+    margin-left: 180px;
+    width: 170px;
+}
+
+#resaler-text {
+    font-family: 'Brittany Signature', sans-serif;
+    letter-spacing: 2px;
+    position: relative;
+    bottom: 160px;
+    margin-left: 116px;
+    font-size: 45px;
+}
+
+
+* {
+
+    box-sizing: border-box;
+}
+
+.waviy {
+    position: relative;
+}
+
+.waviy span {
+    position: relative;
+    display: inline-block;
+    font-size: 70px;
+    color: #355764;
+    text-transform: uppercase;
+    animation: flip 2s infinite;
+    animation-delay: calc(.2s * var(--i));
+    bottom: 650px;
+    left: 760px;
+}
+
+@keyframes flip {
+
+    0%,
+    80% {
+        transform: rotateY(360deg)
+    }
+}
+
+#glow-on-hover {
+    width: 200px;
+    height: 60px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    left: 870px;
+    top: 120px;
+}
+
+#glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+#glow-on-hover:active {
+    color: #000
+}
+
+#glow-on-hover:active:after {
+    background: transparent;
+}
+
+#glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+#glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+
+    50% {
+        background-position: 400% 0;
+    }
+
+    100% {
+        background-position: 0 0;
+    }
+}
